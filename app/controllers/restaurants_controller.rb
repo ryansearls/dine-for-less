@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
     restaurant = Restaurant.new(
     name: params[:name],
     neighborhood: params[:neighborhood],
-    happy_hour: params[:food_specials],
+    food_specials: params[:food_specials],
     happy_hour: params[:happy_hour],
     image: params[:image]
   )
