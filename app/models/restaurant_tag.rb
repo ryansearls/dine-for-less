@@ -1,4 +1,4 @@
 class RestaurantTag < ApplicationRecord
-  belongs_to :restaurants
-  belongs_to :tags
+  belongs_to :restaurant
+  belongs_to :tag
 end
