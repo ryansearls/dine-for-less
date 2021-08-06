@@ -1,2 +1,3 @@
 class RestaurantTagsController < ApplicationController
+  
 end
