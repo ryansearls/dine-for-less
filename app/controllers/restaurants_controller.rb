@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show]
 
   def index
     restaurant = Restaurant.all
@@ -12,7 +13,8 @@ class RestaurantsController < ApplicationController
     neighborhood: params[:neighborhood],
     food_specials: params[:food_specials],
     happy_hour: params[:happy_hour],
-    image: params[:image]
+    image: params[:image],
+    user_id: current_user.id,
   )
 
     if restaurant.save
