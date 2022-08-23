@@ -37,6 +37,7 @@ class RestaurantsController < ApplicationController
     restaurant.food_specials = params[:food_specials] || restaurant.food_specials
     restaurant.happy_hour = params[:happy_hour] || restaurant.happy_hour
     restaurant.image = params[:image] || restaurant.image
+    
 
     if restaurant.save
       render json: {restaurant: restaurant.as_json}
